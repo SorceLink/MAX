@@ -2012,12 +2012,12 @@ end
 
 
 if MsgText[1] == 'اصدار السورس' or MsgText[1] == 'الاصدار' then
-return '👨🏾‍🔧│ اصدار سورس مـاكـس : *v'..version..'* \n📡'
+return '👨🏾‍🔧│ اصدار سورس آرماندو : *v'..version..'* \n📡'
 end
 
 if (MsgText[1] == 'تحديث السورس' or MsgText[1] == 'تحديث السورس 🔂') then
 if not msg.SudoBase then return "♦️*│*هذا الامر يخص {المطور الاساسي} فقط  \n💥" end
-local GetVerison = https.request('https://github.com/MAXTELLE/max.github.io/GetVersion.txt') or 0
+local GetVerison = https.request('https://github.com/SorceLink/max.github.io/GetVersion.txt') or 0
 if GetVerison > version then
 UpdateSourceStart = true
 sendMsg(msg.chat_id_,msg.id_,'🔛*╿* يوجد تحديث جديد الان \n📡*╽* جاري تنزيل وتثبيت التحديث  ...')
@@ -2082,8 +2082,8 @@ end
 if (MsgText[1]== "ايدي" or MsgText[1]=="ايديي🆔") and msg.type == "pv" then return  "\n👨🏻‍💻 | اهلن عزيزي المطور ايديك هوه ⏬\n\n🧟‍♂│"..msg.sender_user_id_.."\n"  end
 
 if MsgText[1]== "قناة السورس 📡" and msg.type == "pv" then
-local inline = {{{text="⚜│قنآهہ‏‏ آلسـورس ضـغـط هـنـآ ",url="t.me/@uop70"}}}
-send_key(msg.sender_user_id_,'  [⚜│قناة سورس : مـاكـس](t.me/@uop70)',nil,inline,msg.id_)
+local inline = {{{text="⚜│قناه‏‏ آلسـورس ضـغـط هـنـآ ",url="t.me/@rnnni"}}}
+send_key(msg.sender_user_id_,'  [⚜│قناة سورس : آرماندو](t.me/@rnnni)',nil,inline,msg.id_)
 return false
 end
 
@@ -4258,7 +4258,7 @@ return sendMsg(msg.chat_id_,msg.id_,[[
 ♦️│لتتندم فڪر قبل ڪلشي  
 🚸│[اضغط هنا لـحـذف الـحـسـاب](https://telegram.org/deactivate)
 👨🏽‍⚖️│بالتـوفيـق عزيزي ...
-🎁╽[اضغط هنا لديك مفاجئه](https://t.me/uop70)
+🎁╽[اضغط هنا لديك مفاجئه](https://t.me/rnnni)
 ]] )
 --=====================================
 elseif Text== "انجب" or Text== "نجب" or Text=="جب" then
