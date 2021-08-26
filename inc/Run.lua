@@ -342,10 +342,10 @@ if msg.content_.ID == "MessageChatAddMembers" then
 	end
 	if msg.content_.members_[0].id_ == our_id and redis:get(max..':WELCOME_BOT') then
 	SUDO_USER = redis:hgetall(max..'username:'..SUDO_ID).username
-	sendPhoto(msg.chat_id_,msg.id_,redis:get(max..':WELCOME_BOT'),[[🙋🏽‍♂╿ مـرحبآ آنآ بوت آسـمـي ]]..redis:get(max..':NameBot:')..[[ ⚜
-	⚔│ آختصـآصـي حمـآيهہ‌‏ آلمـجمـوعآت
-	🚸│ مـن آلسـبآم وآلتوجيهہ‌‏ وآلتگرآر وآلخ...
-	⚖️╽ مـعرف آلمـطـور  : ]]..SUDO_USER:gsub([[\_]],'_')..[[ 🌿
+	sendPhoto(msg.chat_id_,msg.id_,redis:get(max..':WELCOME_BOT'),[[🧚🏻‍♂️ مـرحبآ آنآ بوت آسـمـي ]]..redis:get(max..':NameBot:')..[[ ⚜
+	• اختصاصي حمايه‌‏ القروبات
+	• مـن السبانم والتوجيه‌‏ والتكرار والخ...
+	• مـعرف آلمـطـور  : ]]..SUDO_USER:gsub([[\_]],'_')..[[ 
 	]])
 	return false
 	end
@@ -888,7 +888,7 @@ keyboard.inline_keyboard = {
 	end
 	end
 		if (msg.text=="تحديث" or msg.text=="we" or msg.text=="تحديث ♻️") and msg.sender_user_id_ == SUDO_ID then
-		return sendMsg(msg.chat_id_,msg.id_," 🗂┇تہ‏‏م تحديث آلمـلفآت \n✓",nil,function(arg,data)
+		return sendMsg(msg.chat_id_,msg.id_," •تہ‏‏م تحديث آلمـلفآت \n✓",nil,function(arg,data)
 		Refresh_Start = true
 		end)
 		end 
