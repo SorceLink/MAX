@@ -1474,7 +1474,7 @@ return sendMsg(ChatID,MsgID,'♦️*╿*لا يمكنني حظر العضو .\n�
 else
 redis:hset(max..'username:'..UserID, 'username', Resolv)
 redis:sadd(max..'banned:'..ChatID,UserID)
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽تم حظره  \n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-الحلو ⇠ ❪ '..USERNAME..' ❫\n-الايدي ⇠ ❪ '..UserID..' ❫\n-تم حظره  \n.',17,USERCAR) 
 end
 end)
 
@@ -1482,9 +1482,9 @@ end
 
 if cmd == "unban" then
 if not redis:sismember(max..'banned:'..ChatID,UserID) then 
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽تم بالتأكيد الغاء حظره  \n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-الحلو ⇠ ❪ '..USERNAME..' ❫\n- الايدي ⇠ ❪ '..UserID..' ❫\n-تم بالتأكيد الغاء حظره  \n.',17,USERCAR) 
 else
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽تم الغاء حظره \n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-الحلو ⇠ ❪ '..USERNAME..' ❫\n- الايدي ⇠ ❪ '..UserID..' ❫\n-تم الغاء حظره سابقاً\n.',17,USERCAR) 
 end
 redis:srem(max..'banned:'..ChatID,UserID)
 StatusLeft(ChatID,UserID)
@@ -1505,11 +1505,11 @@ elseif redis:sismember(max..'admins:'..ChatID,UserID) then
 return sendMsg(ChatID,MsgID,"🏌‍♂*│*لا يمكنك كتم الادمن\n🛠") 
 end
 if redis:sismember(max..'is_silent_users:'..ChatID,UserID) then 
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽تم بالتأكيد كتمه  \n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-الحلو ⇠ ❪ '..USERNAME..' ❫\n- الايدي ⇠ ❪ '..UserID..' ❫\n-تم بالتأكيد كتمه  \n.',17,USERCAR) 
 end
 redis:hset(max..'username:'..UserID, 'username', Resolv)
 redis:sadd(max..'is_silent_users:'..ChatID,UserID)
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽تم كتمه \n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n- الايدي ⇠ ❪ '..UserID..' ❫\n-تم كتمه \n.',17,USERCAR) 
 end
 
 if cmd == "unsilent" then
