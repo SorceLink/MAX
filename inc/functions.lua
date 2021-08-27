@@ -5,8 +5,8 @@
 ──▀████████▀──│@GGI55
 ─────▀██▀─────
 │Armando ‿ @GGI55
-تم تطوير وبرمجة السورس من قبل حسن العراقي
-│@Hskh56 ‿ @uop70 
+تم تطوير وبرمجة السورس من قبل ارماندو السوري
+│@rnnni ‿ @GGI55 
 #-------------------------------------------------------------------
 ]]
 
@@ -1152,10 +1152,10 @@ if res == 200 then
 print(url) 
 local Req = JSON.decode(url)
 if Req.ok and Req.result and Req.result.status == "left" or Req.result.status == "kicked" then
-return "🚸╿آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n🔛╽ثم آرجع آرسـل تفعيل ."
+return "•اشترك بالقناه‌‏ اولا ["..UserChaneel.."] \n🔛╽ثم آرجع آرسـل تفعيل ."
 end
 else
-return "🚸╿آشـترگ بآلقنآ‌‏هہ آولآ ["..UserChaneel.."] \n🔛╽ثم آرجع آرسـل تفعيل ."
+return "•اشترك بالقناه اولا ["..UserChaneel.."] \n🔛╽ثم آرجع آرسـل تفعيل ."
 end
 end
  
@@ -1347,19 +1347,19 @@ elseif data.type_.ID == "chatTypeChannel" then
 return sendMsg(ChatID,MsgID,"-**عذرا لا يمكن رفع قناة في البوت \n.") 
 end
 if redis:sismember(max..':KARA_BOT:'..ChatID,UserID) then 
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽انه بالتأكيد منشىء اساسي \n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-العضو ⇠ ❪ '..USERNAME..' ❫\n-الايدي ⇠ ❪ '..UserID..' ❫\n-هو  مالك اساسي من اول \n.',17,USERCAR) 
 end
 redis:hset(max..'username:'..UserID,'username',Resolv)
 redis:sadd(max..':KARA_BOT:'..ChatID,UserID)
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽تمت ترقيته ليصبح منشىء اساسي في البوت \n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-العضو ⇠ ❪ '..USERNAME..' ❫\n-الايدي ⇠ ❪ '..UserID..' ❫\n-تم رفعه ليصبح مالك اساسي   \n.',17,USERCAR) 
 end
 
 if cmd == "remkara" then
 if not redis:sismember(max..':KARA_BOT:'..ChatID,UserID) then
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽انه بالتأكيد ليس منشىء اساسي\n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-العضو ⇠ ❪ '..USERNAME..' ❫\n-الايدي ⇠ ❪ '..UserID..' ❫\n- ليس مالك اساسي اصلاُ.\n.',17,USERCAR) 
 end
 redis:srem(max..':KARA_BOT:'..ChatID,UserID)
-return SendMention(ChatID,UserID,MsgID,'🙍🏻‍♂╿العضو » ❪ '..USERNAME..' ❫\n🎫│الايدي » ❪ '..UserID..' ❫\n💯╽تم تنزيله من المنشىء الاساسي\n✓️',17,USERCAR) 
+return SendMention(ChatID,UserID,MsgID,'-العضو ⇠ ❪ '..USERNAME..' ❫\n-الايدي ⇠ ❪ '..UserID..' ❫\n-تم تنزيله من رتبه مالك الاساسي\n.',17,USERCAR) 
 end
 
 if cmd == "setwhitelist" then
